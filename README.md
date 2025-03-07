@@ -1,4 +1,6 @@
-<div align="center">
+
+
+<div align=center> <img src="./assert/logo.webp" width=50%></div>
 
 # Welcome to PhysVLM
 
