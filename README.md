@@ -1,6 +1,6 @@
 
 
-<div align=center> <img src="./assert/logo.webp" width=50%></div>
+<div align=center> <img src="./assert/logo.png" width=50%></div>
 
 # Welcome to PhysVLM
 
@@ -14,6 +14,7 @@ This is the official repository for PhysVLM. The goal of PhysVLM is to enable Vi
 
 ## Release
 
+- [ ] Paper release [`📕Arxiv`](...).
 - [ ] Release the Data and the Model.
 - [ ] Release the Benchmark Phys-bench.
 - [x] **`2025.02.27`** 🔥**PhysVLM has been accepted to CVPR 2025.**
