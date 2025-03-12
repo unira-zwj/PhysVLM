@@ -1,0 +1,6 @@
+License for the data set: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Authors: Berk C. Calli, Arjun Singh, Aaron Walsman, Siddhartha Srinivasa, Pieter Abbeel, Aaron M. Dollar
+
+The YCB Object and Model Set: Towards Common Benchmarks for Manipulation Research
+http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/

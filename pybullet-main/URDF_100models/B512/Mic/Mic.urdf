@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot name="my_urdf">
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="cabinet.obj" scale="0.2748630160304912 0.38461539017408913 0.20643225448388353" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="cabinet.obj" scale="0.2748630160304912 0.38461539017408913 0.20643225448388353" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <!-- DoorL0 Link -->
+  <link name="doorL0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="doorL.obj" scale="0.2748630160304912 1.5346154067946158 0.8236646953906953" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="doorL.obj" scale="0.2748630160304912 1.5346154067946158 0.8236646953906953" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <!-- Joint for DoorL0 -->
+  <joint name="doorL0_to_base_link" type="revolute">
+    <axis xyz="0 0 1" />
+    <limit effort="5" lower="-1.57" upper="0" velocity="2.283" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <parent link="base_link" />
+    <child link="doorL0" />
+  </joint>
+
+  <!-- Handle1 Link -->
+  <link name="handle1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="handle.obj" scale="0.2748630160304912 0.38461539017408913 0.20643225448388353" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="handle.obj" scale="0.2748630160304912 0.38461539017408913 0.20643225448388353" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <!-- Joint for Handle1 -->
+  <joint name="handle1_to_doorL0" type="fixed">
+    <axis xyz="1 0 0" />
+    <limit effort="5" lower="0" upper="1.57" velocity="2.283" />
+    <origin xyz="0.0 0.3205128251450743 0.10321612724194176" rpy="0.0 0.0 0.0" />
+    <parent link="doorL0" />
+    <child link="handle1" />
+  </joint>
+
+  <!-- Back Surface Link -->
+  <link name="back_surface">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="doorR.obj" scale="0.2748630160304912 1.7037037037037037 0.9259259259259258" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="doorR.obj" scale="0.2748630160304912 1.7037037037037037 0.9259259259259258" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <!-- Joint for Back Surface -->
+  <joint name="back_surface_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="back_surface" />
+    <origin xyz="-0.33 0.41400000000000003 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+</robot>

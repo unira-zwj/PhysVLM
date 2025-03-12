@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="table.urdf">
+  <link name="baseLink">
+    <contact>
+      <lateral_friction value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value=".0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.8"/>
+      <geometry>
+        <mesh filename="table.obj" scale="1.5 1 0.05"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.8"/>
+      <geometry>
+        <box size="1.5 1 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="leg1">
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.65 -0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.95"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.65 -0.4 0.29"/>
+      <geometry>
+        <box size="0.1 0.1 0.95"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="leg1_joint" type="fixed">
+    <parent link="baseLink"/>
+    <child link="leg1"/>
+  </joint>
+
+  <link name="leg2">
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.65 0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.95"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.65 0.4 0.29"/>
+      <geometry>
+        <box size="0.1 0.1 0.95"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="leg2_joint" type="fixed">
+    <parent link="baseLink"/>
+    <child link="leg2"/>
+  </joint>
+
+  <link name="leg3">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.65 -0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.95"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.65 -0.4 0.29"/>
+      <geometry>
+        <box size="0.1 0.1 0.95"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="leg3_joint" type="fixed">
+    <parent link="baseLink"/>
+    <child link="leg3"/>
+  </joint>
+
+  <link name="leg4">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.65 0.4 0.29"/>
+      <geometry>
+        <mesh filename="table.obj" scale="0.1 0.1 0.95"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.65 0.4 0.29"/>
+      <geometry>
+        <box size="0.1 0.1 0.95"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="leg4_joint" type="fixed">
+    <parent link="baseLink"/>
+    <child link="leg4"/>
+  </joint>
+  <!-- Do the same for the other three legs... -->
+</robot>

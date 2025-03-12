@@ -1,0 +1,167 @@
+<robot name="my_urdf">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+            <geometry>
+                <mesh filename="cabinet.obj" scale="0.4414466621095767 0.47658863565050175 1.2085581908901244" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="cabinet.obj" scale="0.4414466621095767 0.47658863565050175 1.2085581908901244" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <link name="doorR0">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 1.901588656245502 2.411073590825798" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 1.901588656245502 2.411073590825798" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <joint name="doorR0_to_base_link" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="5" lower="0" upper="1.57" velocity="2.283" />
+        <origin xyz="0.0 0.47658863565050175 0.0" rpy="0.0 0.0 0.0" />
+        <parent link="base_link" />
+        <child link="doorR0" />
+    </joint>
+
+    <link name="doorR1">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 1.901588656245502 2.411073590825798" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 1.901588656245502 2.411073590825798" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <joint name="doorR1_to_base_link" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="5" lower="0" upper="1.57" velocity="5.283" />
+        <origin xyz="0.0 0.47658863565050175 0.6042790954450622" rpy="0.0 0.0 0.0" />
+        <parent link="base_link" />
+        <child link="doorR1" />
+    </joint>
+
+    <link name="handle2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+            <geometry>
+                <mesh filename="handle.obj" scale="0.4414466621095767 0.47658863565050175 0.6042790954450622" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="handle.obj" scale="0.4414466621095767 0.47658863565050175 0.6042790954450622" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <joint name="handle2_to_doorR0" type="fixed">
+        <origin xyz="0.0 -0.39715719637541813 0.3521395477225311" rpy="0.0 0.0 0.0" />
+        <parent link="doorR0" />
+        <child link="handle2" />
+    </joint>
+
+    <link name="handle3">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white">
+                <color rgba="0.8 0.8 0.8 1" />
+            </material>
+            <geometry>
+                <mesh filename="handle.obj" scale="0.4414466621095767 0.47658863565050175 0.6042790954450622" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="handle.obj" scale="0.4414466621095767 0.47658863565050175 0.6042790954450622" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <joint name="handle3_to_doorR1" type="fixed">
+        <origin xyz="0.0 -0.39715719637541813 0.4321395477225311" rpy="0.0 0.0 0.0" />
+        <parent link="doorR1" />
+        <child link="handle3" />
+    </joint>
+
+    <link name="back_surface">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="white">
+                <color rgba="1 1 1 1" />
+            </material>
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 2.111111111111111 5.4074074074074066" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="doorR.obj" scale="0.4414466621095767 2.111111111111111 5.4074074074074066" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2" />
+            <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+        </inertial>
+    </link>
+
+    <joint name="back_surface_joint" type="fixed">
+        <origin xyz="-0.53 0.513 0.0" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="back_surface" />
+    </joint>
+</robot>

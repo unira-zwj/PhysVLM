@@ -1,0 +1,12 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 09/04/2022 07:04:37
+
+newmtl Rohr_007_001
+	Ka 0.5 0.5 0.5
+	Kd 0.2149581 0.2149581 0.2149581
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0078125 0.0078125 0.0078125
+	Ns 1

@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<robot name="my_urdf">
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="cabinet.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="cabinet.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <!-- Drawer 0 -->
+  <link name="drawer0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="drawer0_to_base_link" type="prismatic">
+    <axis xyz="1 0 0" />
+    <limit effort="5" lower="0" upper="0.4" velocity="2.283" />
+    <origin xyz="0.0 0.0 0.14037393304904078" rpy="0.0 0.0 0.0" />
+    <parent link="base_link" />
+    <child link="drawer0" />
+  </joint>
+
+  <!-- Drawer 1 -->
+  <link name="drawer1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="drawer1_to_base_link" type="prismatic">
+    <axis xyz="1 0 0" />
+    <limit effort="5" lower="0" upper="0.4" velocity="2.283" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <parent link="base_link" />
+    <child link="drawer1" />
+  </joint>
+
+  <!-- Drawer 2 -->
+  <link name="drawer2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="drawer.obj" scale="0.2748630160304912 1.264548513259331 0.5530732962132207" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="drawer2_to_base_link" type="prismatic">
+    <axis xyz="1 0 0" />
+    <limit effort="5" lower="0" upper="0.4" velocity="2.283" />
+    <origin xyz="0.0 0.0 0.28074786609808156" rpy="0.0 0.0 0.0" />
+    <parent link="base_link" />
+    <child link="drawer2" />
+  </joint>
+
+  <!-- Handle 3 -->
+  <link name="handle3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="handle3_to_drawer0" type="fixed">
+    <axis xyz="0 0 1" />
+    <limit effort="5" lower="0" upper="1.57" velocity="2.283" />
+    <origin xyz="0.0 0.15886287855016723 0.07018696652452039" rpy="1.5707963267948963 0.0 0.0" />
+    <parent link="drawer0" />
+    <child link="handle3" />
+  </joint>
+
+  <!-- Handle 4 -->
+  <link name="handle4">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="handle4_to_drawer1" type="fixed">
+    <axis xyz="0 0 1" />
+    <limit effort="5" lower="0" upper="1.57" velocity="2.283" />
+    <origin xyz="0.0 0.15886287855016723 0.07018696652452039" rpy="1.5707963267948963 0.0 0.0" />
+    <parent link="drawer1" />
+    <child link="handle4" />
+  </joint>
+
+  <!-- Handle 5 -->
+  <link name="handle5">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="handle.obj"
+          scale="0.2748630160304912 0.31772575710033446 0.4211217991471224" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="handle5_to_drawer2" type="fixed">
+    <axis xyz="0 0 1" />
+    <limit effort="5" lower="0" upper="1.57" velocity="2.283" />
+    <origin xyz="0.0 0.15886287855016723 0.07018696652452039" rpy="1.5707963267948963 0.0 0.0" />
+    <parent link="drawer2" />
+    <child link="handle5" />
+  </joint>
+
+  <!-- Back Surface -->
+  <link name="back_surface">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <material name="white">
+        <color rgba="0.8 0.8 0.8 1" />
+      </material>
+      <geometry>
+        <mesh filename="doorR.obj" scale="0.2748630160304912 1.4074074074074072 1.8888888888888888" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="doorR.obj" scale="0.2748630160304912 1.4074074074074072 1.8888888888888888" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4" />
+    </inertial>
+  </link>
+
+  <joint name="back_surface_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="back_surface" />
+    <origin xyz="-0.33 0.34199999999999997 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+</robot>

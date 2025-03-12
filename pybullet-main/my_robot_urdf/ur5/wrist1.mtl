@@ -1,0 +1,20 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 09/04/2022 07:03:50
+
+newmtl Scheibe_001
+	Ka 0.5 0.5 0.5
+	Kd 0.0512 0.0512 0.0512
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 1
+newmtl blau_001
+	Ka 0.5 0.5 0.5
+	Kd 0.25088 0.34752 0.4096
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 1

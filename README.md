@@ -14,11 +14,11 @@ This is the official repository for PhysVLM. The goal of PhysVLM is to enable Vi
 
 ## Release
 
-- [ ] Paper release [`📕Arxiv`](...).
-- [ ] Release the Data and the Model.
-- [ ] Release the Benchmark Phys-bench.
+- [ ] Release the Phys100k-physqa dataset and the Model.
+- [x] **`2025.03.12`**Paper release [`📕Arxiv`](https://arxiv.org/abs/2503.08481).
+- [x] **`2025.03.12`** 🔥Release the Benchmark: [Phys-bench-sim](pybullet-main/README.md).
 - [x] **`2025.02.27`** 🔥**PhysVLM has been accepted to CVPR 2025.**
-- [x] 🔥Release the PhysVLM code.
+- [x] 🔥Release the code of [Phys-VLM](physvlm-main/README.md).
 
 ## What can PhysVLM do now?
 PhysVLM demonstrates advanced performance across reachability understanding、EmbodiedQA、VQA.
@@ -31,7 +31,7 @@ PhysVLM demonstrates advanced performance across reachability understanding、Em
 
 ```shell
 git clone git@github.com:unira-zwj/PhysVLM.git
-cd PhysVLM
+cd PhysVLM/physvlm-main
 pip install -e .
 pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
@@ -54,7 +54,7 @@ pip install flash-attn --no-build-isolation
 python start_physvlm_server.py
 ```
 
-then you can request the server with `(app, host="0.0.0.0", port=8001)`
+then you can request the server with `(app, host="0.0.0.0", port=8001)`, example: `inference.py` or `./eval/eval_phys_bench_sim.py`
 
 ---
 
@@ -66,10 +66,12 @@ then you can request the server with `(app, host="0.0.0.0", port=8001)`
 ## Citation
 If you find PhysVLM useful for your research and applications, please cite using this BibTeX:
 ```bibtex
-@inproceedings{zwj2025PhysVLM,
-  title={PhysVLM: Enabling Visual Language Models to Understand Robotic Physical Reachability},
-  author={Zhou, Weijie and Tao, Manli and Zhao, Chaoyang and Guo, Haiyun and Dong, Honghui and Tang, Ming and Wang, Jinqiao},
-  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition 2025},
-  year={2025},
-  organization={IEEE}
+@misc{zhou2025physvlmenablingvisuallanguage,
+      title={PhysVLM: Enabling Visual Language Models to Understand Robotic Physical Reachability}, 
+      author={Weijie Zhou and Manli Tao and Chaoyang Zhao and Haiyun Guo and Honghui Dong and Ming Tang and Jinqiao Wang},
+      year={2025},
+      eprint={2503.08481},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2503.08481}, 
 }

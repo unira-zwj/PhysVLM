@@ -1,0 +1,28 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 09/04/2022 07:12:17
+
+newmtl blau_005
+	Ka 0.5 0.5 0.5
+	Kd 0.25088 0.34752 0.4096
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 1
+newmtl Rohr_005
+	Ka 0.5 0.5 0.5
+	Kd 0.41984 0.41984 0.41984
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 1
+newmtl verbindung_005
+	Ka 0.5 0.5 0.5
+	Kd 0.14272000000000002 0.14272000000000002 0.14272000000000002
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.0625 0.0625 0.0625
+	Ns 1
