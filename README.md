@@ -14,7 +14,7 @@ This is the official repository for PhysVLM. The goal of PhysVLM is to enable Vi
 
 ## Release
 
-- [ ] Release the Phys100k-physqa dataset and the Model.
+- [ ] **soon!** Release the Phys100k-physqa dataset and the Model.
 - [x] **`2025.03.12`** 🔥Paper release [`📕Arxiv`](https://arxiv.org/abs/2503.08481).
 - [x] **`2025.03.12`** 🔥Release the Benchmark: [Phys-bench-sim](pybullet-main/README.md).
 - [x] **`2025.02.27`** 🔥**PhysVLM has been accepted to CVPR 2025.**
