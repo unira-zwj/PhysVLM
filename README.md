@@ -18,7 +18,7 @@ This is the official repository for PhysVLM. The goal of PhysVLM is to enable Vi
 
 ## Release
 
-- [x] **`2025.03.18`** Release the Phys100k-physqa dataset and the Model at [`🤗HuggingFace`](JettZhou/PhysVLM-Qwen2.5-3B).
+- [x] **`2025.03.18`** Release the Phys100k-physqa dataset and the Model at [`🤗HuggingFace`](https://huggingface.co/JettZhou/PhysVLM-Qwen2.5-3B).
 - [x] **`2025.03.12`** 🔥Paper release [`📕Arxiv`](https://arxiv.org/abs/2503.08481).
 - [x] **`2025.03.12`** 🔥Release the Benchmark: [EQA-phys-val-sim](EQA-phys-simulator/README.md).
 - [x] **`2025.02.27`** 🔥**PhysVLM has been accepted to CVPR 2025.**
@@ -48,7 +48,7 @@ pip install flash-attn --no-build-isolation
 
 | Model                              | Links                                  |
 |---------                           |---------------------------------------|
-| PhysVLM-3B                | [`🤗HuggingFace`](JettZhou/PhysVLM-Qwen2.5-3B)    |
+| PhysVLM-3B                | [`🤗HuggingFace`](https://huggingface.co/JettZhou/PhysVLM-Qwen2.5-3B)    |
 ---
 
 
