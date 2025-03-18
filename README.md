@@ -2,6 +2,8 @@
 
 <div align=center> <img src="./assert/logo.png" width=50%></div>
 
+<div align="center">
+
 # Welcome to PhysVLM
 
 </div>
@@ -46,7 +48,7 @@ pip install flash-attn --no-build-isolation
 
 | Model                              | Links                                  |
 |---------                           |---------------------------------------|
-| PhysVLM-3B (Ready)                 | [`🤗HuggingFace`](JettZhou/PhysVLM-Qwen2.5-3B)    |
+| PhysVLM-3B                | [`🤗HuggingFace`](JettZhou/PhysVLM-Qwen2.5-3B)    |
 ---
 
 
@@ -56,7 +58,11 @@ pip install flash-attn --no-build-isolation
 python start_physvlm_server.py
 ```
 
-then you can request the server with `(app, host="0.0.0.0", port=8001)`, example: `inference.py` or `./eval/eval_phys_bench_sim.py`
+Then you can request the server with `(app, host="0.0.0.0", port=8001)`, 
+
+example: run `python inference.py` for easy inference, 
+
+or `cd eval & python eval_phys_bench_sim.py` for EQA-phys benchmark evaluation.
 
 ---
 
